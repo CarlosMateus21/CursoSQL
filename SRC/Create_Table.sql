@@ -57,3 +57,15 @@ CREATE TABLE Afiliados_Ministerio(
     Fecha_Nacimiento DATE NOT NULL
 
 );
+ALTER TABLE Afiliados_Sat
+
+ADD CONSTRAINT FK_Afiliados_Sat_Afiliados FOREIGN KEY (IDNumero_Doc)
+
+REFERENCES Afiliados (IDNumero_Doc);
+
+
+ALTER TABLE Afiliados_Ministerio
+
+ADD CONSTRAINT FK_Afiliados_Ministerio_Afiliados FOREIGN KEY (IDNumero_Doc)
+
+REFERENCES Afiliados (IDNumero_Doc);
